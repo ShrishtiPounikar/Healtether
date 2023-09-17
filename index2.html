@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Signup Form</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+     
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background:#008374;
+}
+.row{
+    background: white;
+    border-radius: 30px;
+    box-shadow: 22px 20px 100px grey;
+}
+img{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.submit-btn{
+    height: 50px;
+    width: 100%;
+    background: black;
+    border: 1px solid thin #cccccc;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-weight:  bold;
+    text-align: center;
+    transition: 0.5s;
+
+}
+.submit-btn:hover{
+    background-color: white;
+    border: 1px solid;
+    color: black;
+
+}
+body {
+      background-color: #f5f5f5;
+    }
+   
+
+</style>
+</head>
+<body>
+<section class="form my-5 mx-4">
+<div class="container">
+<div class="row no-gutters">
+<div class="col-lg-5"><img src="./doctor.avif" class="img-fluid" alt="doctor"></div>
+<div class="col-lg-7 px-5 pt-5">
+  <h1 class="font-weight-bold py-4">SIGN UP</h1>
+  <h4>Sign up to your account</h4>
+  <div class="container">
+    <div class="col-lg-7">
+    <form id="signupForm" class="animation">
+      <div class="form-row">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" class="form-control" m-1>
+        <span class="input-icon"><i class="bi bi-person"></i></span>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-row">
+        <div class="col-lg-7">
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email-Address" class="form-control m-1">
+        <span class="input-icon"><i class="bi bi-envelope"></i></span>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-row">
+        <label for="password">Password</label>
+        <input type="password" placeholder="******" class="form-control m-1 ">
+        <span class="input-icon"><i class="bi bi-lock"></i></span>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-row">
+        <label for="cnfrm-password">Confirm Password</label>
+        <input type="password" placeholder="******" class="form-control m-1">
+        <span class="input-icon"><i class="bi bi-lock"></i></span>
+        <span class="error-message"></span>
+      </div>
+      <button type="submit" class="submit-btn m-1">Sign Up</button>
+    </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+
+      // Perform form validation here
+      // You can add your custom validation logic
+      // For simplicity, I am just clearing the form fields after submission
+      form.reset();
+    });
+  </script>
+</body>
+</html>
